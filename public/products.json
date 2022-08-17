@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "description": "Camiseta con mangas largas",
+      "price": 22.22,
+      "imgUrl": "camiseta-1.jpg"
+    },
+    {
+      "id": 2,
+      "description": "Camiseta con mangas largas",
+      "price": 19.99,
+      "imgUrl": "camiseta-2.jpg"
+    },
+    {
+        "id": 2,
+        "description": "Camiseta con dibujo chulo",
+        "price": 29.99,
+        "imgUrl": "camiseta-3.jpg",
+        "discount": 20
+    }
+  ]
+}
