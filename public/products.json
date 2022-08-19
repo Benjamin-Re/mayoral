@@ -8,13 +8,13 @@
     },
     {
       "id": 2,
-      "description": "Camiseta con mangas largas",
+      "description": "Sudadera con mangas largas",
       "price": 19.99,
       "imgUrl": "camiseta-2.jpg"
     },
     {
-        "id": 2,
-        "description": "Camiseta con dibujo chulo",
+        "id": 3,
+        "description": "Camisa con dibujo chulo",
         "price": 29.99,
         "imgUrl": "camiseta-3.jpg",
         "discount": 20

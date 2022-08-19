@@ -4,13 +4,14 @@ import { useContext } from 'react'
 import { GlobalContext } from '../../components/context';
 
 const HomePage: NextPage = () => {
-  const products = useContext(GlobalContext)
- 
+  const {getFilteredProducts} = useContext(GlobalContext)
+  const products = getFilteredProducts
+
   return (
     <>
       {products?.map(product => {
         return (
-          <Card {...product}></Card>
+          <Card {...product} key={product.id}></Card>
         )
       })}
     </>

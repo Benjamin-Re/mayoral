@@ -2,19 +2,12 @@ import ContextWrapper from '../../components/context';
 import Layout from '../../components/layout';
 import '../../styles/global.css';
 
-export default function App({ Component, pageProps}) {
+export default function App({ Component, pageProps }) {
   return (
-
-    <Layout>
-     
-      <ContextWrapper>   
-     
-      <Component {...pageProps} />
-      </ContextWrapper>  
-    </Layout>
-
-    
+    <ContextWrapper>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ContextWrapper>
   );
 }
-
-
