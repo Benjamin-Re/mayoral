@@ -15,7 +15,7 @@ export default function Card(props) {
         {props.discount ? (
           <>
             <div className={styles.oldPrice}>{props.price}€</div>
-            <div className={styles.discountPrice}>{props.price*((100-props.discount)/100)}€(-{props.discount}%)</div>
+            <div className={styles.discountPrice}>{(props.price*((100-props.discount)/100)).toFixed(2)}€(-{props.discount}%)</div>
           </>
         ) : (
           <div className={styles.price}>{props.price}€</div>

@@ -18,6 +18,26 @@
         "price": 29.99,
         "imgUrl": "camiseta-3.jpg",
         "discount": 20
+    },
+    {
+      "id": 4,
+      "description": "Pantalon largo",
+      "price": 19.99,
+      "imgUrl": "pantalon-1.jpg"
+    },
+    {
+      "id": 5,
+      "description": "Zapatos de bebe",
+      "price": 13.90,
+      "imgUrl": "zapatos-1.jpg"
+    },
+    {
+      "id": 6,
+      "description": "Vestido de felpa",
+      "price": 37.99,
+      "imgUrl": "vestido-1.jpg",
+      "discount": 15
     }
+
   ]
 }
