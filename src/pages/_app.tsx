@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ContextWrapper>
       <Layout>
+        {/*The Component prop is the active page*/}
         <Component {...pageProps} />
       </Layout>
     </ContextWrapper>
