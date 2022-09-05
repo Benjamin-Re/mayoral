@@ -1,19 +1,22 @@
 import { useState, useContext } from 'react';
 import { GlobalContext } from './context';
+import styles from './selector.module.css'
+
+
 export default function Selector() {
   const [getFilter, setFilter] = useState();
   const { getProducts, setFilteredProducts } = useContext(GlobalContext);
   const products = getProducts;
 
   return (
-    <>
-      <label htmlFor="filter">Ordenar por:</label>
-      <select name="filter" id="filter" onChange={handleChange} value={getFilter}>
+    <div className={styles.selector}>
+      <label htmlFor="filter">Ordenar porr:</label>
+      <select  name="filter" id="filter" onChange={handleChange} value={getFilter}>
         <option value="priceAsc">precio asc</option>
         <option value="priceDesc">precio desc</option>
         <option value="name">nombre</option>
       </select>
-    </>
+    </div>
   );
 
   function handleChange(e) {

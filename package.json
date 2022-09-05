@@ -8,34 +8,8 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "jest": {
-    "extensionsToTreatAsEsm": [".ts"],
-    "globals": {
-      "ts-jest": {
-        "useESM": true
-      }
-    },
-    "transform": {
-      "^.+\\.tsx$": "ts-jest",
-      "^.+\\.ts$": "ts-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!variables/.*)"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/file_mock.js",
-      "\\.(css|less)$": "<rootDir>/mocks/style_mock.js"
-    },
-    "setupFilesAfterEnv": [
-      "<rootDir>/setup_test.js"
-    ],
-    "preset": "ts-jest/presets/js-with-ts",
 
-    "moduleDirectories": [
-      "node_modules",
-      "<rootDir>/"
-    ]
-  },
+  
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
@@ -45,7 +19,8 @@
     "next": "12.1.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "sharp": "^0.30.4"
+    "sharp": "^0.30.4",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
