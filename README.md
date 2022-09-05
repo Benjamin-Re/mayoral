@@ -8,7 +8,7 @@ Maquetar las imágenes adjuntas y tener en cuenta los diferentes cortes en móvi
 
 Tecnologías/Librerías requeridas:
 
--	React
+-	React -[x] 
 -	Typescript
 -	Next.js
 
