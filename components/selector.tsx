@@ -1,12 +1,13 @@
 import { useState, useContext } from 'react';
 import { GlobalContext } from './context';
 import styles from './selector.module.css'
-
+import sortByName from '../utils/sortByName';
+import Product from '../types'
 
 export default function Selector() {
   const [getFilter, setFilter] = useState();
   const { getProducts, setFilteredProducts } = useContext(GlobalContext);
-  const products = getProducts;
+  const products: Product[] = getProducts;
 
   return (
     <div className={styles.selector}>
@@ -23,7 +24,7 @@ export default function Selector() {
     setFilter(e.target.value);
     switch (e.target.value) {
       case 'name':
-        sortByName()
+        setFilteredProducts([...sortByName(products)]);
         break;
       case 'priceAsc':
         sortByPriceAsc()
@@ -35,20 +36,20 @@ export default function Selector() {
 
 }
 
-    function sortByName() {
-        const sortedProducts = products.sort((a, b) => {
-            const nameA: string = a.description.toUpperCase();
-            const nameB: string = b.description.toUpperCase();
-            if (nameA < nameB) {
-                return -1;
-            }
-            if (nameA > nameB) {
-                return 1;
-            }
-            return 0;
-        });
-        setFilteredProducts([...sortedProducts]);
-    }
+    // function sortByName(products) {
+    //     const sortedProducts = products.sort((a, b) => {
+    //         const nameA: string = a.description.toUpperCase();
+    //         const nameB: string = b.description.toUpperCase();
+    //         if (nameA < nameB) {
+    //             return -1;
+    //         }
+    //         if (nameA > nameB) {
+    //             return 1;
+    //         }
+    //         return 0;
+    //     });
+    //     return sortedProducts
+    // }
 
     function sortByPriceAsc() {
         const sortedProducts = products.sort((a,b)=> {
